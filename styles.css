@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+/* Global styles */
 body {
   font-family: 'VT323', monospace;
   background-color: #0d0d0d;
@@ -19,6 +20,8 @@ body {
   text-align: center;
   position: relative;
   z-index: 1;
+  max-width: 80%; /* Limit container width */
+  margin: auto; /* Center align container */
 }
 
 h1 {
@@ -38,6 +41,8 @@ input[type="file"] {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
+  width: 100%; /* Full width for input */
+  max-width: 300px; /* Limit max width */
 }
 
 button {
@@ -67,6 +72,7 @@ button:hover {
   }
 }
 
+/* Background and animation styles */
 .background-container {
   position: fixed;
   top: 0;
@@ -107,3 +113,17 @@ button:hover {
   }
 }
 
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="file"] {
+    max-width: 100%;
+  }
+}
